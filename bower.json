@@ -1,0 +1,21 @@
+{
+  "name": "LingSok",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "~1.2.25",
+    "firebase": "~1.0.24",
+    "angularfire": "~0.8.2",
+    "angular-local-storage": "~0.0.7",
+    "angular-bootstrap": "~0.11.2",
+    "bootstrap-css-only": "~3.2.0",
+    "angular-route": "~1.2.25",
+    "angular-bootstrap-select": "~0.0.3",
+    "angular-isotope": "~0.1.14"
+  },
+  "devDependencies": {
+    "DefinitelyTyped": "*"
+  },
+  "resolutions": {
+    "angular": "~1.2.25"
+  }
+}

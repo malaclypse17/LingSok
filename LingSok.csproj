@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{997C2148-E93F-4393-B296-8D00D587E8EA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app\directives\resizeEvent.js" />
+    <Content Include="app\templates\LingDocCreateOrUpdate.html" />
+    <Content Include="app\templates\LingDocList.html" />
+    <Content Include="files\titlepages\1645.png" />
+    <Content Include="files\titlepages\1693-P.png" />
+    <Content Include="files\titlepages\1756.png" />
+    <Content Include="files\titlepages\1765.png" />
+    <Content Include="files\titlepages\1799.png" />
+    <Content Include="files\titlepages\1804-O.png" />
+    <Content Include="files\titlepages\1805-O.png" />
+    <Content Include="files\titlepages\1819-R.png" />
+    <Content Include="files\titlepages\1820-F.png" />
+    <Content Include="files\titlepages\1821-R.png" />
+    <Content Include="files\titlepages\1822-E.png" />
+    <Content Include="files\titlepages\1823-B.png" />
+    <Content Include="files\titlepages\1829-B.png" />
+    <Content Include="files\titlepages\1829-D.png" />
+    <Content Include="files\titlepages\1829-K.png" />
+    <Content Include="files\titlepages\1830-D.png" />
+    <Content Include="files\titlepages\1831-I.png" />
+    <Content Include="files\titlepages\1832-I.png" />
+    <Content Include="files\titlepages\1833-K.png" />
+    <Content Include="files\titlepages\1834-G.png" />
+    <Content Include="files\titlepages\1837-G.png" />
+    <Content Include="files\titlepages\1837-R.png" />
+    <Content Include="files\titlepages\1838-S.png" />
+    <Content Include="files\titlepages\1843-H.png" />
+    <Content Include="files\titlepages\1845-H.png" />
+    <Content Include="files\titlepages\1849-H.png" />
+    <Content Include="files\titlepages\1851-N.png" />
+    <Content Include="files\titlepages\1851-U.png" />
+    <Content Include="files\titlepages\1851-W.png" />
+    <Content Include="files\titlepages\1852-I.png" />
+    <Content Include="files\titlepages\1853-D.png" />
+    <Content Include="files\titlepages\1856-R.png" />
+    <Content Include="files\titlepages\1857-G.png" />
+    <Content Include="files\titlepages\1859-V.png" />
+    <Content Include="files\titlepages\1860-S.png" />
+    <Content Include="files\titlepages\1861-B.png" />
+    <Content Include="files\titlepages\1861-O.png" />
+    <Content Include="files\titlepages\1863-D.png" />
+    <Content Include="files\titlepages\1867-K.png" />
+    <Content Include="files\titlepages\1868-H.png" />
+    <Content Include="files\titlepages\1869-K.png" />
+    <Content Include="files\titlepages\1870-7.png" />
+    <Content Include="files\titlepages\1870-B.png" />
+    <Content Include="files\titlepages\1876-A.png" />
+    <Content Include="files\titlepages\1876-T.png" />
+    <Content Include="files\titlepages\1877-H.png" />
+    <Content Include="files\titlepages\1881-O.png" />
+    <Content Include="files\titlepages\1882-R.png" />
+    <Content Include="files\titlepages\1882-Re.png" />
+    <Content Include="files\titlepages\1887-O.png" />
+    <Content Include="files\titlepages\1887-V.png" />
+    <Content Include="files\titlepages\1888-V.png" />
+    <Content Include="files\titlepages\1890-F.png" />
+    <Content Include="files\titlepages\1890-U.png" />
+    <Content Include="files\titlepages\1892-I.png" />
+    <Content Include="files\titlepages\1893-I.png" />
+    <Content Include="files\titlepages\1894-K.png" />
+    <Content Include="files\titlepages\1895-B.png" />
+    <Content Include="files\titlepages\1896-G.png" />
+    <Content Include="files\titlepages\1897-H.png" />
+    <Content Include="files\titlepages\1899-H.png" />
+    <Content Include="files\titlepages\AfPet.png" />
+    <Content Include="files\titlepages\Tal.png" />
+    <Content Include="files\titlepages\thumbs\tn1645.png" />
+    <Content Include="files\titlepages\thumbs\tn1693-P.png" />
+    <Content Include="files\titlepages\thumbs\tn1756.png" />
+    <Content Include="files\titlepages\thumbs\tn1765.png" />
+    <Content Include="files\titlepages\thumbs\tn1799.png" />
+    <Content Include="files\titlepages\thumbs\tn1804-O.png" />
+    <Content Include="files\titlepages\thumbs\tn1805-O.png" />
+    <Content Include="files\titlepages\thumbs\tn1819-R.png" />
+    <Content Include="files\titlepages\thumbs\tn1820-F.png" />
+    <Content Include="files\titlepages\thumbs\tn1821-R.png" />
+    <Content Include="files\titlepages\thumbs\tn1822-E.png" />
+    <Content Include="files\titlepages\thumbs\tn1823-B.png" />
+    <Content Include="files\titlepages\thumbs\tn1829-B.png" />
+    <Content Include="files\titlepages\thumbs\tn1829-D.png" />
+    <Content Include="files\titlepages\thumbs\tn1829-K.png" />
+    <Content Include="files\titlepages\thumbs\tn1830-D.png" />
+    <Content Include="files\titlepages\thumbs\tn1831-I.png" />
+    <Content Include="files\titlepages\thumbs\tn1832-I.png" />
+    <Content Include="files\titlepages\thumbs\tn1833-K.png" />
+    <Content Include="files\titlepages\thumbs\tn1834-G.png" />
+    <Content Include="files\titlepages\thumbs\tn1837-G.png" />
+    <Content Include="files\titlepages\thumbs\tn1837-R.png" />
+    <Content Include="files\titlepages\thumbs\tn1838-S.png" />
+    <Content Include="files\titlepages\thumbs\tn1843-H.png" />
+    <Content Include="files\titlepages\thumbs\tn1845-H.png" />
+    <Content Include="files\titlepages\thumbs\tn1849-H.png" />
+    <Content Include="files\titlepages\thumbs\tn1851-N.png" />
+    <Content Include="files\titlepages\thumbs\tn1851-U.png" />
+    <Content Include="files\titlepages\thumbs\tn1851-W.png" />
+    <Content Include="files\titlepages\thumbs\tn1852-I.png" />
+    <Content Include="files\titlepages\thumbs\tn1853-D.png" />
+    <Content Include="files\titlepages\thumbs\tn1856-R.png" />
+    <Content Include="files\titlepages\thumbs\tn1857-G.png" />
+    <Content Include="files\titlepages\thumbs\tn1859-V.png" />
+    <Content Include="files\titlepages\thumbs\tn1860-S.png" />
+    <Content Include="files\titlepages\thumbs\tn1861-B.png" />
+    <Content Include="files\titlepages\thumbs\tn1861-O.png" />
+    <Content Include="files\titlepages\thumbs\tn1863-D.png" />
+    <Content Include="files\titlepages\thumbs\tn1867-K.png" />
+    <Content Include="files\titlepages\thumbs\tn1868-H.png" />
+    <Content Include="files\titlepages\thumbs\tn1869-K.png" />
+    <Content Include="files\titlepages\thumbs\tn1870-7.png" />
+    <Content Include="files\titlepages\thumbs\tn1870-B.png" />
+    <Content Include="files\titlepages\thumbs\tn1876-A.png" />
+    <Content Include="files\titlepages\thumbs\tn1876-T.png" />
+    <Content Include="files\titlepages\thumbs\tn1877-H.png" />
+    <Content Include="files\titlepages\thumbs\tn1881-O.png" />
+    <Content Include="files\titlepages\thumbs\tn1882-R.png" />
+    <Content Include="files\titlepages\thumbs\tn1882-Re.png" />
+    <Content Include="files\titlepages\thumbs\tn1887-O.png" />
+    <Content Include="files\titlepages\thumbs\tn1887-V.png" />
+    <Content Include="files\titlepages\thumbs\tn1888-V.png" />
+    <Content Include="files\titlepages\thumbs\tn1890-F.png" />
+    <Content Include="files\titlepages\thumbs\tn1890-U.png" />
+    <Content Include="files\titlepages\thumbs\tn1892-I.png" />
+    <Content Include="files\titlepages\thumbs\tn1893-I.png" />
+    <Content Include="files\titlepages\thumbs\tn1894-K.png" />
+    <Content Include="files\titlepages\thumbs\tn1895-B.png" />
+    <Content Include="files\titlepages\thumbs\tn1896-G.png" />
+    <Content Include="files\titlepages\thumbs\tn1897-H.png" />
+    <Content Include="files\titlepages\thumbs\tn1899-H.png" />
+    <Content Include="files\titlepages\thumbs\tnAfPet.png" />
+    <Content Include="files\titlepages\thumbs\tnTal.png" />
+    <Content Include="images\bsb.png" />
+    <Content Include="images\ghfs.png" />
+    <Content Include="images\gp.png" />
+    <Content Include="images\kb.png" />
+    <Content Include="images\kbd.png" />
+    <Content Include="images\libraryicons\bsb.png" />
+    <Content Include="images\libraryicons\ghfs.png" />
+    <Content Include="images\libraryicons\gp.png" />
+    <Content Include="images\libraryicons\kb.png" />
+    <Content Include="images\libraryicons\kbd.png" />
+    <Content Include="images\libraryicons\nb.png" />
+    <Content Include="images\libraryicons\ulb.png" />
+    <Content Include="images\ling.gif" />
+    <Content Include="images\nb.png" />
+    <Content Include="images\Pehr_Henrik_Ling.jpg" />
+    <Content Include="index.html" />
+    <Content Include="gruntfile.js" />
+    <Content Include="styles\lingApp.css" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="_all.ts" />
+    <TypeScriptCompile Include="app\controllers\lingDocCreateOrUpdateCtrl.ts" />
+    <TypeScriptCompile Include="app\controllers\lingDocListCtrl.ts" />
+    <TypeScriptCompile Include="app\interfaces.ts" />
+    <TypeScriptCompile Include="app\lingSearchApp.ts" />
+    <TypeScriptCompile Include="app\model.ts" />
+    <TypeScriptCompile Include="app\services\lingDataSvc.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="bower.json" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>LingSok</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52074</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52074/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>

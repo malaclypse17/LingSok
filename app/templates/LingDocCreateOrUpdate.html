@@ -1,0 +1,138 @@
+﻿
+<div class="modal-header">
+    <h2 ng-show="createMode">Skapa nytt dokument</h2>
+    <h2 ng-show="!createMode">Editera dokument</h2>
+</div>
+<div class="modal-body">
+    <form novalidate name="documentForm" role="form">
+        <div class="row-fluid">
+            <div class="form-group" ng-class="{'has-error': documentForm.title.$invalid}">
+                <label for="title">
+                    Dokumentets titel
+                </label>
+                <input name="title" class="form-control" placeholder="Titel" required ng-model="document.title" />
+                <span class="help-block" ng-show="documentForm.title.$error.required&&documentForm.title.$dirty">Dokumentet måste ha en titel</span>
+            </div>
+
+            <div class="form-group">
+                <label for="author">
+                    Författare
+                </label>
+                <input name="author" class="form-control" placeholder="Författare" ng-model="document.author" />
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="form-group col-md-4">
+                <label for="language">
+                    Språk
+                </label>
+                <select name="language" class="form-control selectpicker" ng-required ng-model="document.language">
+                    <option selected="selected">Svenska</option>
+                    <option>Norska</option>
+                    <option>Tyska</option>
+                    <option>Danska</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="city">
+                    Utgivningsort
+                </label>
+                <input name="city" class="form-control" placeholder="Utgivningsort" ng-model="document.city" />
+            </div>
+            <div class="form-group col-md-4">
+                <label for="year">
+                    Utgivningsår
+                </label>
+                <input type="number" class="form-control" min="1500" max="1950" placeholder="År" ng-model="document.year" />
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="form-group col-md-4">
+                <label for="donor">
+                    Donator
+                </label>
+                <select name="donor" class="form-control selectpicker" ng-model="document.donor">
+                    <option value="" selected>Donator</option>
+                    <option>GHFS</option>
+                    <option>SkHFS</option>
+                    <option>Andreas Engström</option>
+                    <option>Johan Lundby</option>
+                    <option>Alexander Ros</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="illustrations">
+                    Illustrationer
+                </label>
+                <select name="illustrations" class="form-control selectpicker" ng-model="document.illustrations">
+                    <option selected="selected">Inga illustrationer</option>
+                    <option>Få illustrationer</option>
+                    <option>Rikligt illustrerad</option>
+                </select>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="form-group">
+                <label for="url">
+                    Nedladdningssida för originalversion (Libris, Nasjonalbibliotek etc)
+                </label>
+                <input name="url" type="url" class="form-control" placeholder="Nedladdnings-URL" ng-model="document.url" />
+            </div>
+        </div>
+        <div class="row-fluid">
+            <img ng-show="document.urlSource" src="/images/libraryicons/{{document.urlSource}}.png" class="pull-left">
+            <div class="form-group col-lg-7">
+                
+                <label for="urlSource">
+                    Källa
+                </label>
+                <select name="urlSource" class="form-control" ng-model="document.urlSource">
+                    <option>KB</option>
+                    <option>NB</option>
+                    <option>KBD</option>
+                    <option>GP</option>
+                    <option>BSB</option>
+                    <option>ULB</option>
+                    <option>GHFS</option>
+                </select>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="form-group">
+                <label for="fullFile">
+                    Filnamn på fullversion av dokumentet (original)
+                </label>
+                <input name="fullFile" class="form-control" placeholder="Full version filnamn" ng-model="document.fullFile" />
+            </div>
+            <div class="form-group">
+                <label for="croppedFile">
+                    Filnamn på beskuren utskriftsvänlig version av dokumentet
+                </label>
+                <input name="croppedFile" class="form-control" placeholder="Beskuren version filnamn" ng-model="document.croppedFile" />
+            </div>
+            <div class="form-group">
+                <label for="titlePage">
+                    Filnamn på bild av dokumentets titelsida eller omslag
+                </label>
+                <input name="titlePage" class="form-control" placeholder="Titelsida" ng-model="document.titlePage" />
+            </div>
+            <div class="form-group">
+                <label for="titleThumbnail">
+                    Filnamn på miniatyr av titelsidan (max 200x200px)
+                </label>
+                <input name="titleThumbnail" class="form-control" placeholder="Titelsida miniatyr" ng-model="document.titleThumbnail" />
+            </div>
+            <div class="form-group">
+                <div ng-repeat="tag in tags" class="btn-group">
+                    <button type="button" class="btn btn-primary" ng-model="document.tags[tag.tagId]" btn-checkbox>{{tag.name}}</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-warning" ng-click="cancel()">Avbryt</button>
+    <button ng-show="createMode" class="btn btn-primary" type="button" ng-click="create()" ng-disabled="documentForm.$invalid">Skapa dokument</button>
+    <button ng-show="!createMode" class="btn btn-primary" type="button" ng-click="update()" ng-disabled="documentForm.$invalid">Spara dokument</button>
+</div>
+
