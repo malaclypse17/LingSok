@@ -1,0 +1,83 @@
+﻿.navbar-brand{
+    padding-left:50px;
+    background: url(../images/ling.gif) left center no-repeat;
+}
+.navbar-form{
+    margin-top:0;
+    margin-bottom:0;
+}
+#isotopeContainer{
+    margin-top: 100px;
+    list-style:none;
+    padding-left:0;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+li.lingDoc {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+li.lingDoc img.manualIcon {
+    margin-left:5px;
+}
+li.lingDoc .panel-heading {
+    padding: 1px 15px;
+}
+li.lingDoc .panel-footer {
+    padding: 6px 15px;
+}
+
+li.lingDoc .panel-footer .btn {
+    padding: 2px 8px;
+}
+
+@media all and (max-width: 750px) {
+    li.lingDoc {
+        width: 100%;
+    }
+    
+    li.lingDoc .panel-heading h4 {
+        font-size: 14px;
+        font-weight:bold;
+    }
+
+    li.lingDoc img.manualIcon {
+        height:120px;
+    }
+    li.lingDoc img.libraryIcon {
+        height:20px;
+    }
+}
+
+@media all and (min-width: 1601px) {
+    li.lingDoc {
+        width: 20%;
+    }
+}
+@media all and (min-width: 1300px) and (max-width:1600px) {
+    li.lingDoc {
+        width: 25%;
+    }
+}
+@media all and (min-width: 1000px) and (max-width:1299px) {
+    li.lingDoc {
+        width: 33%;
+    }
+}
+@media all and (min-width: 751px) and (max-width:999px) {
+    li.lingDoc {
+        width: 50%;
+    }
+    li.lingDoc img.manualIcon {
+        height:160px;
+    }
+    li.lingDoc img.libraryIcon {
+        height:35px;
+    }
+}
+
+
