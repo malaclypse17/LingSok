@@ -11,8 +11,8 @@
             <a class="navbar-brand" href="#">LingSök</a>
         </div>
         <div class="navbar-collapse navbar-left navbar-form form-group-sm" ng-class="{collapse: isCollapsed}">
-            <button class="btn btn-info navbar-btn" ng-show="auth.user" ng-click="openCreate();">Skapa ny</button>
-            <select name="tag" data-width="auto" ng-change="reFilter()" class="form-control selectpicker" ng-model="filterTag">
+            
+            <select name="tag" data-width="auto" ng-change="reFilter()" class="form-control selectpicker navbar-btn" ng-model="filterTag">
                 <option value="" selected="selected">Alla typer</option>
                 <option ng-repeat="tag in tags" value=".tag{{tag.tagId+1}}">{{tag.name}}</option>
             </select>
@@ -26,6 +26,7 @@
 
         </div>
         <form id="auth" class="navbar-collapse navbar-form navbar-right form-group-sm" ng-class="{collapse: isCollapsed}" ng-controller="LingSearchAuthCtrl">
+            <button class="btn btn-info navbar-btn" ng-show="auth.user" ng-click="openCreate();">Skapa ny</button>
             <fieldset ng-hide="auth.user">               
                 <input type="email" class="form-control input-small" placeholder="email" ng-model="email" />
                 <input type="password" class="form-control input-small" placeholder="lösen" ng-model="password" />
