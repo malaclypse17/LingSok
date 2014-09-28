@@ -39,7 +39,7 @@
                 comments: false           // true | false (default)
             },
             dev: {                          // a particular target   
-                src: ["*.ts"], // The source typescript files, See : http://gruntjs.com/configuring-tasks#files                
+                src: ["**/*.ts"], // The source typescript files, See : http://gruntjs.com/configuring-tasks#files                
                 watch: 'ts',         // If specified, configures this target to watch the specified director for ts changes and reruns itself.
                 out: 'dev',
                 options: {                  // override the main options, See : http://gruntjs.com/configuring-tasks#options
@@ -47,7 +47,7 @@
                 },
             },
             live: {                          // a particular target   
-                src: ["ts/**/*.ts"], // The source typescript files, See : http://gruntjs.com/configuring-tasks#files                
+                src: ["**/*.ts"], // The source typescript files, See : http://gruntjs.com/configuring-tasks#files                
                 watch: 'ts',         // If specified, configures this target to watch the specified director for ts changes and reruns itself.
                 out: 'scripts/app.js',
                 options: {                  // override the main options, See : http://gruntjs.com/configuring-tasks#options

@@ -5,10 +5,20 @@ module Interfaces {
         document: Model.LingDoc;
         tags: Array<Model.Tag>;
         createMode: boolean;
+
         create();
         update();
         cancel();
     }
+
+    export interface ILingSearchAuthScope extends ng.IScope {
+        password: string;
+        email: string;
+        login();
+        logout();
+        signup();
+    }
+
     export interface ILingDocListScope extends ng.IScope {
         documents;
         tags: Array<Model.Tag>;
@@ -25,6 +35,7 @@ module Interfaces {
         id: string;
     }
     export interface ILingDataSvc {
+        auth;
         all(): Array<Model.LingDoc>;
         allTags(): Array<Model.Tag>;
         createTag(newTag: Model.Tag);

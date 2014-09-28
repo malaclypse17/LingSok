@@ -10,20 +10,32 @@
             </button>
             <a class="navbar-brand" href="#">LingSök</a>
         </div>
-        <div class="navbar-collapse navbar-form form-group-sm" ng-class="{collapse: isCollapsed}">
-            <button class="btn btn-default navbar-btn" ng-click="openCreate();">Skapa ny</button>       
-                <select name="tag" data-width="auto" ng-change="reFilter()" class="form-control selectpicker" ng-model="filterTag">
-                    <option value="" selected="selected">Alla typer</option>
-                    <option ng-repeat="tag in tags" value=".tag{{tag.tagId+1}}">{{tag.name}}</option>
-                </select>
-                <select name="language" class="form-control selectpicker" ng-change="reFilter()" ng-model="filterLanguage">
-                    <option value="" selected="selected">Alla språk</option>
-                    <option value=".Svenska">Svenska</option>
-                    <option value=".Norska">Norska</option>
-                    <option value=".Tyska">Tyska</option>
-                    <option value=".Danska">Danska</option>
-                </select>
-        </div><!--/.nav-collapse -->
+        <div class="navbar-collapse navbar-left navbar-form form-group-sm" ng-class="{collapse: isCollapsed}">
+            <button class="btn btn-info navbar-btn" ng-show="auth.user" ng-click="openCreate();">Skapa ny</button>
+            <select name="tag" data-width="auto" ng-change="reFilter()" class="form-control selectpicker" ng-model="filterTag">
+                <option value="" selected="selected">Alla typer</option>
+                <option ng-repeat="tag in tags" value=".tag{{tag.tagId+1}}">{{tag.name}}</option>
+            </select>
+            <select name="language" class="form-control selectpicker" ng-change="reFilter()" ng-model="filterLanguage">
+                <option value="" selected="selected">Alla språk</option>
+                <option value=".Svenska">Svenska</option>
+                <option value=".Norska">Norska</option>
+                <option value=".Tyska">Tyska</option>
+                <option value=".Danska">Danska</option>
+            </select>
+
+        </div>
+        <form id="auth" class="navbar-collapse navbar-form navbar-right form-group-sm" ng-class="{collapse: isCollapsed}" ng-controller="LingSearchAuthCtrl">
+            <fieldset ng-hide="auth.user">               
+                <input type="email" class="form-control input-small" placeholder="email" ng-model="email" />
+                <input type="password" class="form-control input-small" placeholder="lösen" ng-model="password" />
+                <button type="submit" class="btn btn-info navbar-btn" ng-click="login()">Logga in/Registrera</button>
+            </fieldset>
+            <span ng-show="auth.user">
+                {{auth.user.name}}
+                <button type="submit" class="btn btn-info navbar-btn" ng-click="logout()">Logga ut</button>
+            </span>
+        </form>
     </div>
 </div>
 <ul id="isotopeContainer" isotope-container="" ng-cloak="" class="">
@@ -37,12 +49,12 @@
                 <p ng-show="document.author">{{document.author}}</p>
                 {{document.language}}<span ng-show="document.city">, {{document.city}}</span><span ng-show="document.year"> ({{document.year}})</span>
                 <p><span ng-show="document.pages">{{document.pages}} sidor, </span>{{document.illustrations}}</p>
-                <p ng-show="document.url"><a href="{{document.url}}"><span ng-show="document.urlSource"><img class="libraryIcon" src="/images/libraryicons/{{document.urlSource}}.png"><span><span style="white-space:nowrap">&nbsp;Ladda ner&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></span></a></p>
+                <p ng-show="document.url"><a target="_blank" href="{{document.url}}"><span ng-show="document.urlSource"><img class="libraryIcon" src="/images/libraryicons/{{document.urlSource}}.png"><span><span style="white-space:nowrap">&nbsp;Ladda ner&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></span></a></p>
                 <div ng-repeat="tag in tags" class=" clearfix btn-group btn-group-xs">
                     <label type="button" class="btn btn-info" ng-show="document.tags[tag.tagId]">{{tag.name}}</label>
                 </div>
             </div>
-            <div class="panel-footer">
+            <div ng-show="auth.user" class="panel-footer">
                 <button class="btn btn-default" ng-click=" openUpdate(document);">Ändra</button>
                 <button class="btn btn-danger" ng-click="delete(document);">Radera</button>
             </div>

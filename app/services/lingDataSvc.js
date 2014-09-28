@@ -1,15 +1,17 @@
 ﻿/// <reference path='../../_all.ts' />
 var LingDataSvc = (function () {
-    function LingDataSvc($firebase) {
+    function LingDataSvc($firebase, $firebaseSimpleLogin, $rootScope) {
         var self = this;
         this.fireBaseUrl = "https://lingsearch.firebaseio.com/";
         var fireBaseLingDocsRef = new Firebase(this.fireBaseUrl + 'documents');
         self.docList = $firebase(fireBaseLingDocsRef).$asArray();
         var fireBaseLingTagsRef = new Firebase(this.fireBaseUrl + 'tags');
         this.tagList = $firebase(fireBaseLingTagsRef).$asArray();
+        var ref = new Firebase(this.fireBaseUrl);
+        this.auth = $firebaseSimpleLogin(ref);
     }
-    LingDataSvc.LingDataSvc = function ($firebase) {
-        return new LingDataSvc($firebase);
+    LingDataSvc.LingDataSvc = function ($firebase, $firebaseSimpleLogin, $rootScope) {
+        return new LingDataSvc($firebase, $firebaseSimpleLogin, $rootScope);
     };
 
     LingDataSvc.prototype.all = function () {
@@ -44,6 +46,6 @@ var LingDataSvc = (function () {
     return LingDataSvc;
 })();
 var app = angular.module('lingSearchApp');
-LingDataSvc.$inject = ['$firebase'];
-app.service('lingDataSvc', ["$firebase", LingDataSvc]);
+LingDataSvc.$inject = ['$firebase', '$firebaseSimpleLogin', '$rootScope'];
+app.service('lingDataSvc', ["$firebase", '$firebaseSimpleLogin', '$rootScope', LingDataSvc]);
 //# sourceMappingURL=lingDataSvc.js.map

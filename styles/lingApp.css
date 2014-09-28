@@ -6,6 +6,20 @@
     margin-top:0;
     margin-bottom:0;
 }
+#auth input{
+    margin-top: 5px;
+    font-size: 12px;
+    width:100px;
+    padding-top:7px;
+    height:25px;
+}
+#auth .btn{
+    margin-top: 13px;
+    font-size: 12px;
+    padding-top:4px;
+    height:25px;
+}
+
 #isotopeContainer{
     margin-top: 100px;
     list-style:none;
