@@ -7,25 +7,32 @@ class LingDocListCtrl {
     private dataSvc: Interfaces.ILingDataSvc;
     private $modal: ng.ui.bootstrap.IModalService;
 
-
-    constructor($modal,$scope: Interfaces.ILingDocListScope, $routeParams: Interfaces.ILingSearchRouteParams, dataSvc: Interfaces.ILingDataSvc) {
+    constructor(dialogs,$modal,$scope: Interfaces.ILingDocListScope, $routeParams: Interfaces.ILingSearchRouteParams, dataSvc: Interfaces.ILingDataSvc,$translate) {
         var self = this;
         self.dataSvc = dataSvc;      
         self.$scope = $scope;
         self.$routeParams = $routeParams;
         self.$modal = $modal;
         self.$scope.delete = (function (doc: Model.LingDoc) {
-            return self.dataSvc.delete(doc);
+            var dlg = dialogs.confirm();
+            dlg.result.then(function (btn) {
+                return self.dataSvc.delete(doc);
+            }, function (btn) {                   
+            });          
         });
+        $scope.lang = 'sv-SE';
+        $translate.use($scope.lang);
         self.$scope.$container = $('#isotopeContainer');
         self.$scope.filterTag = "";
         self.$scope.filterLanguage = "";
+        self.$scope.documentsLoaded = false;
         self.$scope.documents = this.dataSvc.all();
         self.$scope.tags = this.dataSvc.allTags();
         self.$scope.documents.$loaded().then(function () {
             self.$scope.documents = self.$scope.documents.sort(function (a, b) {
                 return a.year - b.year;
             });
+            self.$scope.documentsLoaded = true;
             self.$scope.$emit('iso-method', { name: null, params: null });
         });
         self.$scope.reFilter = (function () {
@@ -78,5 +85,5 @@ class LingDocListCtrl {
     }
 }
        
-LingDocListCtrl.$inject = ['$modal','$scope','$routeParams', 'lingDataSvc'];
-app.controller('lingDocListCtrl', ["$modal","$scope", "$routeParams","lingDataSvc", LingDocListCtrl]);
+LingDocListCtrl.$inject = ['dialogs','$modal','$scope','$routeParams', 'lingDataSvc','$translate'];
+app.controller('lingDocListCtrl', ['dialogs', "$modal", "$scope", "$routeParams", "lingDataSvc",  '$translate', LingDocListCtrl]);

@@ -39,7 +39,7 @@
         </form>
     </div>
 </div>
-<ul id="isotopeContainer" isotope-container="" ng-cloak="" class="">
+<ul id="isotopeContainer" isotope-container="" ng-cloak="" ng-show="documentsLoaded" class="">
     <li ng-repeat="document in documents track by document.$id" isotope-item="" class="lingDoc" ng-class="getFilterClasses(document)">
         <div class="panel panel-default">
             <div class="panel-heading">

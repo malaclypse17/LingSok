@@ -14,6 +14,7 @@ module Interfaces {
     export interface ILingSearchAuthScope extends ng.IScope {
         password: string;
         email: string;
+        
         login();
         logout();
         signup();
@@ -23,6 +24,8 @@ module Interfaces {
         documents;
         tags: Array<Model.Tag>;
         $container;
+        lang: string;
+        documentsLoaded: boolean;
         filterTag: string;
         filterLanguage: string;
         reFilter();  

@@ -14,6 +14,7 @@ class LingDataSvc implements Interfaces.ILingDataSvc {
         this.tagList = $firebase(fireBaseLingTagsRef).$asArray();
         var ref = new Firebase(this.fireBaseUrl);
         this.auth = $firebaseSimpleLogin(ref);
+        
     }
 
     public static LingDataSvc($firebase, $firebaseSimpleLogin, $rootScope): LingDataSvc {
