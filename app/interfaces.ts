@@ -5,7 +5,6 @@ module Interfaces {
         document: Model.LingDoc;
         tags: Array<Model.Tag>;
         createMode: boolean;
-
         create();
         update();
         cancel();
@@ -13,11 +12,15 @@ module Interfaces {
 
     export interface ILingSearchAuthScope extends ng.IScope {
         password: string;
-        email: string;
-        
+        email: string;    
         login();
         logout();
         signup();
+    }
+
+    export interface ILingDocRegisterScope extends ng.IScope {
+        password: string;
+        submitForm();
     }
 
     export interface ILingDocListScope extends ng.IScope {

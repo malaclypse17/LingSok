@@ -12,7 +12,8 @@
     "angular-bootstrap-select": "~0.0.3",
     "angular-isotope": "~0.1.14",
     "firebase-simple-login": "~1.6.4",
-    "angular-dialog-service": "~5.2.1"
+    "angular-dialog-service": "~5.2.1",
+    "angular-ui-utils": "~0.1.1"
   },
   "devDependencies": {
     "DefinitelyTyped": "*"

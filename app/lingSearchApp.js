@@ -1,7 +1,11 @@
 ﻿/// <reference path='../_all.ts' />
 var LingSearchApp;
 (function (LingSearchApp) {
-    var app = angular.module('lingSearchApp', ['ngRoute', 'firebase', 'ui.bootstrap', 'iso', 'angular-bootstrap-select', 'angular-bootstrap-select.extra', 'ngResize', 'LocalStorageModule', 'dialogs.main', 'pascalprecht.translate']);
+    var app = angular.module('lingSearchApp', [
+        'ngRoute', 'firebase', 'ui.bootstrap',
+        'iso', 'angular-bootstrap-select', 'angular-bootstrap-select.extra',
+        'ngResize', 'LocalStorageModule', 'dialogs.main', 'pascalprecht.translate',
+        'ui.utils']);
     var Config = (function () {
         function Config($routeProvider, $translateProvider) {
             $routeProvider.when("/list", {
