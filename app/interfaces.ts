@@ -12,6 +12,7 @@ module Interfaces {
 
     export interface ILingSearchAuthScope extends ng.IScope {
         password: string;
+        confirmPassword: string;
         email: string;    
         login();
         logout();
