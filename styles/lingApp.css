@@ -6,9 +6,15 @@
     margin-top:0;
     margin-bottom:0;
 }
-#auth input{  
-    font-size: 12px;
-    width:100px;
+#auth input.mail{  
+    font-size: 10px;
+    width:200px;
+}
+
+
+#auth input.pass{  
+    font-size: 10px;
+    width:75px;
 }
 #auth .btn{
     font-size: 12px;

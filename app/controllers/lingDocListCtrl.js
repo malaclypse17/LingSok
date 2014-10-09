@@ -9,9 +9,9 @@ var LingDocListCtrl = (function () {
         self.$routeParams = $routeParams;
         self.$modal = $modal;
         self.$scope.delete = (function (doc) {
-            var dlg = dialogs.confirm();
+            var dlg = dialogs.confirm("Är du säker?", "Vill du verkligen ta bort detta dokument helt ur databasen?", { size: 'sm' });
             dlg.result.then(function (btn) {
-                return self.dataSvc.delete(doc);
+                return self.dataSvc.delete(doc).then(dialogs.notify("Dokumentet borttaget", "Detta dokument har nu helt tagits bort ur databasen."));
             }, function (btn) {
             });
         });

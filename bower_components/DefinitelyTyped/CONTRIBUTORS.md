@@ -1,4 +1,4 @@
-# Contributors
+﻿# Contributors
 
 This is a non-exhaustive list of definitions and their creators. If you created a definition but are not listed then feel free to send a pull request on this file with your name and url.
 
@@ -48,6 +48,7 @@ All definitions files include a header with the author and editors, so at some p
 * [Browser Harness](https://github.com/scriby/browser-harness) (by [Chris Scribner](https://github.com/scriby))
 * [bucks](https://github.com/CyberAgent/bucks.js) (by [Shunsuke Ohtani](https://github.com/zaneli))
 * [CasperJS](http://casperjs.org) (by [Jed Hunsaker](https://github.com/jedhunsaker))
+* [CanvasJS](http://canvasjs.com) (by [Mark Overholt](https://github.com/mover5))
 * [Cheerio](https://github.com/MatthewMueller/cheerio) (by [Bret Little](https://github.com/blittle))
 * [Chosen](http://harvesthq.github.com/chosen/) (by [Boris Yankov](https://github.com/borisyankov))
 * [Chroma.js](https://github.com/gka/chroma.js) (by [Sebastian Brückner](https://github.com/invliD))
@@ -56,7 +57,7 @@ All definitions files include a header with the author and editors, so at some p
 * [CKEditor](https://github.com/ckeditor/ckeditor-dev) (by [Ondrej Sevcik](https://github.com/ondrejsevcik))
 * [Clone](https://github.com/pvorb/node-clone) (by [Kieran Simpson](https://github.com/kierans))
 * [CodeMirror](http://codemirror.net) (by [François de Campredon](https://github.com/fdecampredon))
-* [Commander](http://github.com/visionmedia/commander.js) (by [Marcelo Dezem](https://github.com/mdezem))
+* [Commander](http://github.com/visionmedia/commander.js) (by [Marcelo Dezem](https://github.com/mdezem) and [vvakame](https://github.com/vvakame))
 * [configstore](http://github.com/yeoman/configstore) (by [Bart van der Schoor](https://github.com/Bartvds))
 * [Cordova](http://cordova.apache.org) (by [Microsoft Open Technologies, Inc.](http://msopentech.com/))
 * [Cordovarduino](https://github.com/stereolux/cordovarduino) (by [Hendrik Maus](https://github.com/hendrikmaus))
@@ -143,6 +144,7 @@ All definitions files include a header with the author and editors, so at some p
 * [iCheck](http://damirfoy.com/iCheck/) (by [Dániel Tar](https://github.com/qcz))
 * [Impress.js](https://github.com/bartaz/impress.js) (by [Boris Yankov](https://github.com/borisyankov))
 * [Imagemagick](http://github.com/rsms/node-imagemagick) (by [Carlos Ballesteros Velasco](https://github.com/soywiz))
+* [insight](https://github.com/yeoman/insight) (by [vvakame](https://github.com/vvakame))
 * [interact.js](http://github.com/taye/interact.js) (by [Douglas Eichelberger](https://github.com/dduugg))
 * [Ion.RangeSlider](https://github.com/IonDen/ion.rangeSlider) (by [Douglas Eichelberger](https://github.com/dduugg))
 * [Ionic-Cordova](https://github.com/driftyco/) (by [Hendrik Maus](https://github.com/hendrikmaus))
@@ -153,6 +155,7 @@ All definitions files include a header with the author and editors, so at some p
 * [Jasmine-data_driven_tests](https://github.com/gburghardt/jasmine-data_driven_tests) (by [Anthony MacKinnon](https://github.com/AnthonyMacKinnon))
 * [Jasmine-jQuery](https://github.com/velesin/jasmine-jquery) (by [Gregor Stamac](https://github.com/gstamac))
 * [jDataView](https://github.com/jDataView/jDataView) (by [Ingvar Stepanyan](https://github.com/RReverser))
+* [Jest](http://facebook.github.io/jest/) (by [Joshua Smith](https://github.com/Josh211ua))
 * [JointJS](http://www.jointjs.com/) (by [Aidan Reel](http://github.com/areel))
 * [jQRangeSlider](http://ghusse.github.com/jQRangeSlider) (by [Dániel Tar](https://github.com/qcz))
 * [jQuery](http://jquery.com/) (from TypeScript samples)
@@ -276,6 +279,7 @@ All definitions files include a header with the author and editors, so at some p
 * [mysql](https://github.com/felixge/node-mysql) (by [William Johnston](https://github.com/wjohnsto))
 * [nconf](https://github.com/flatiron/nconf) (by [Jeff Goddard](https://github.com/jedigo))
 * [needle](https://github.com/tomas/needle) (by [San Chen](https://github.com/bigsan))
+* [nexpect](https://github.com/nodejitsu/nexpect) (by [vvakame](https://github.com/vvakame))
 * [noble](https://github.com/sandeepmistry/noble) (by [Seon-Wook Park](https://github.com/swook))
 * [nock](https://github.com/pgte/nock) (by [bonnici](https://github.com/bonnici))
 * [Node.js](http://nodejs.org/) (from TypeScript samples)
@@ -287,6 +291,7 @@ All definitions files include a header with the author and editors, so at some p
 * [nodeunit](https://github.com/caolan/nodeunit) (by [Jeff Goddard](https://github.com/jedigo))
 * [node_zeromq](https://github.com/JustinTulloss/zeromq.node) (by [Dave McKeown](https://github.com/davemckeown))
 * [node-sqlserver](https://github.com/WindowsAzure/node-sqlserver) (by [Boris Yankov](https://github.com/borisyankov))
+* [node-tar](https://github.com/npm/node-tar) (by [Maxime LUCE](https://github.com/SomaticIT))
 * [node-uuid](https://github.com/broofa/node-uuid) (by [Jeff May](https://github.com/jeffmay))
 * [notify.js](https://github.com/alexgibson/notify.js) (by [soundTricker](https://github.com/soundTricker))
 * [npm](https://github.com/npm/npm) (by [Maxime LUCE](https://github.com/SomaticIT))
@@ -327,6 +332,7 @@ All definitions files include a header with the author and editors, so at some p
 * [Rickshaw](http://code.shutterstock.com/rickshaw/) (by [Blake Niemyjski](https://github.com/niemyjski))
 * [Riot.js](https://github.com/moot/riotjs) (by [vvakame](https://github.com/vvakame))
 * [Restify](https://github.com/mcavage/node-restify) (by [Bret Little](https://github.com/blittle))
+* [React](http://facebook.github.io/react/) (by [Phips Peter](https://github.com/pspeter3)
 * [Redis](https://github.com/mranney/node_redis) (by [Carlos Ballesteros Velasco](https://github.com/soywiz))
 * [Request](https://github.com/mikeal/request) (by [Carlos Ballesteros Velasco](https://github.com/soywiz))
 * [Royalslider](http://dimsemenov.com/plugins/royal-slider/) (by [Christiaan Rakowski](https://github.com/csrakowski))
