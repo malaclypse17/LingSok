@@ -33,7 +33,6 @@
                 <button type="submit" class="btn btn-info navbar-btn" ng-click="login()">Logga in</button>
             </fieldset>
             <span ng-show="authData">
-                {{authData.password.email}}
                 <button type="submit" class="btn btn-info navbar-btn" ng-click="logout()">Logga ut</button>
             </span>
         </form>
@@ -43,7 +42,7 @@
     <li ng-repeat="document in documents track by document.$id" isotope-item="" class="lingDoc" ng-class="getFilterClasses(document)">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h4><a class="lingDocTitle" href="#">{{document.title}} <span ng-show="document.year"> ({{document.year}})</span></a></h4>
+                <h4><a class="lingDocTitle" href="#">{{document.title|characters:85}}<span ng-show="document.year"> ({{document.year}})</span></a></h4>
             </div>
             <div class="panel-body">
                 <img ng-show="document.titleThumbnail" class="pull-right manualIcon dropshadow" ng-src="/files/titlepages/thumbs/{{document.titleThumbnail}}">

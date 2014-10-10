@@ -4,7 +4,7 @@ module LingSearchApp {
         ['ngRoute', 'firebase', 'ui.bootstrap',
             'iso', 'angular-bootstrap-select', 'angular-bootstrap-select.extra',
             'ngResize', 'LocalStorageModule', 'dialogs.main', 'pascalprecht.translate',
-        'ui.utils']);
+            'ui.utils', 'truncate']);
     export class Config {
         constructor($routeProvider: ng.route.IRouteProvider,$translateProvider) {
             $routeProvider.when("/list", {

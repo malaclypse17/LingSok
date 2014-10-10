@@ -18,6 +18,7 @@
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="app\directives\truncate.js" />
     <Content Include="app\translations.js" />
     <Content Include="app\directives\resizeEvent.js" />
     <Content Include="app\templates\LingDocRegister.html" />
