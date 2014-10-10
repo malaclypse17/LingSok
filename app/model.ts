@@ -14,6 +14,7 @@
         urlSource: string;
         fullFile: string;
         croppedFile: string;
+        transcription: string;
         illustrations: string;
         titlePage: string;
         titlepageThumbnail: string;

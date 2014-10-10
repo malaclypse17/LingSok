@@ -46,6 +46,10 @@ li.lingDoc img.manualIcon {
     margin-left:5px;
 }
 
+.lingDocDescription{
+    white-space:pre-wrap;
+}
+
 li.lingDoc img.titlePage {
     margin-left:10px;
     max-height:500px;
