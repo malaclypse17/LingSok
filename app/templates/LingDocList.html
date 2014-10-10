@@ -26,14 +26,14 @@
 
         </div>
         <form id="auth" class="navbar-collapse navbar-form navbar-right form-group-sm" ng-class="{collapse: isCollapsed}" ng-controller="LingSearchAuthCtrl">
-            <button class="btn btn-info navbar-btn" ng-show="auth.user.uid=='simplelogin:1'" ng-click="openCreate();">Skapa ny</button>
-            <fieldset ng-hide="auth.user">               
+            <button class="btn btn-info navbar-btn" ng-show="authData.uid=='simplelogin:1'" ng-click="openCreate();">Skapa ny</button>
+            <fieldset ng-hide="authData">
                 <input type="email" class="form-control input-small mail" placeholder="email" ng-model="email" />
                 <input type="password" class="form-control input-small pass" placeholder="lösen" ng-model="password" />
                 <button type="submit" class="btn btn-info navbar-btn" ng-click="login()">Logga in</button>
             </fieldset>
-            <span ng-show="auth.user">
-                {{auth.user.name}}
+            <span ng-show="authData">
+                {{authData.password.email}}
                 <button type="submit" class="btn btn-info navbar-btn" ng-click="logout()">Logga ut</button>
             </span>
         </form>
@@ -46,16 +46,16 @@
                 <h4><a class="lingDocTitle" href="#">{{document.title}} <span ng-show="document.year"> ({{document.year}})</span></a></h4>
             </div>
             <div class="panel-body">
-                <img ng-show="document.titleThumbnail" class="pull-right manualIcon" ng-src="/files/titlepages/thumbs/{{document.titleThumbnail}}">
+                <img ng-show="document.titleThumbnail" class="pull-right manualIcon dropshadow" ng-src="/files/titlepages/thumbs/{{document.titleThumbnail}}">
                 <p ng-show="document.author">{{document.author}}</p>
                 {{document.language}}<span ng-show="document.city">, {{document.city}}</span><span ng-show="document.year"> ({{document.year}})</span>
                 <p><span ng-show="document.pages">{{document.pages}} sidor, </span>{{document.illustrations}}</p>
-                <p ng-show="auth.user!=null&&document.url"><a target="_blank" href="{{document.url}}"><span ng-show="document.urlSource"><img class="libraryIcon" src="/images/libraryicons/{{document.urlSource}}.png"><span><span style="white-space:nowrap">&nbsp;Ladda ner&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></span></a></p>
+                <p ng-show="authData!=null&&document.url"><a target="_blank" href="{{document.url}}"><span ng-show="document.urlSource"><img class="libraryIcon" src="/images/libraryicons/{{document.urlSource}}.png"><span><span style="white-space:nowrap">&nbsp;Ladda ner&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></span></a></p>
                 <div ng-repeat="tag in tags" class=" clearfix btn-group btn-group-xs">
                     <label type="button" class="btn btn-info" ng-show="document.tags[tag.tagId]">{{tag.name}}</label>
                 </div>
             </div>
-            <div ng-show="auth.user.uid=='simplelogin:1'" class="panel-footer">
+            <div ng-show="authData.uid=='simplelogin:1'" class="panel-footer">
                 <button class="btn btn-default" ng-click=" openUpdate(document);">Ändra</button>
                 <button class="btn btn-danger" ng-click="delete(document);">Radera</button>
             </div>

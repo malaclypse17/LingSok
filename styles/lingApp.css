@@ -35,6 +35,13 @@ li.lingDoc {
   padding-left: 15px;
 }
 
+.dropshadow {
+height: auto;
+-webkit-box-shadow: -5px 3px 10px 1px rgba(0,0,0,0.91);
+-moz-box-shadow: -5px 3px 10px 1px rgba(0,0,0,0.91);
+box-shadow: -5px 3px 10px 1px rgba(0,0,0,0.91);
+}
+
 li.lingDoc img.manualIcon {
     margin-left:5px;
 }
