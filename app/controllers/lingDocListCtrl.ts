@@ -6,11 +6,13 @@ class LingDocListCtrl {
     private $routeParams: Interfaces.ILingSearchRouteParams;
     private dataSvc: Interfaces.ILingDataSvc;
     private $modal: ng.ui.bootstrap.IModalService;
+    private $timeout;
 
-    constructor(dialogs,$modal,$scope: Interfaces.ILingDocListScope, $routeParams: Interfaces.ILingSearchRouteParams, dataSvc: Interfaces.ILingDataSvc,$translate) {
+    constructor($timeout,dialogs,$modal,$scope: Interfaces.ILingDocListScope, $routeParams: Interfaces.ILingSearchRouteParams, dataSvc: Interfaces.ILingDataSvc,$translate) {
         var self = this;
         self.dataSvc = dataSvc;      
         self.$scope = $scope;
+        self.$timeout = $timeout;
         self.$routeParams = $routeParams;
         self.$modal = $modal;
         self.$scope.delete = (function (doc: Model.LingDoc) {
@@ -24,6 +26,7 @@ class LingDocListCtrl {
         $translate.use($scope.lang);
         self.$scope.$container = $('#isotopeContainer');
         self.$scope.filterTag = "";
+        self.$scope.currentSelected = null;
         self.$scope.filterLanguage = "";
         self.$scope.documentsLoaded = false;
         self.$scope.documents = this.dataSvc.all();
@@ -82,8 +85,24 @@ class LingDocListCtrl {
             });
             createModal.result.then(function (document) {}, function (document) {});
         });
+        self.$scope.setSelected = function (document: Model.LingDoc) {
+            if (self.$scope.currentSelected!=null) {
+                //Close old selected one
+                $('#doc' + self.$scope.currentSelected.$id).removeClass('selectedDoc');
+            }
+            if (self.$scope.currentSelected!=null && self.$scope.currentSelected.$id == document.$id) {
+                //We just weanted to close this one, don't open a new
+                self.$scope.currentSelected = null;
+            } else {
+                //Open this one
+                $('#doc' + document.$id).addClass('selectedDoc');
+                self.$scope.currentSelected = document;
+            }
+            self.$timeout((function () { self.$scope.$emit('iso-method', { name: null, params: null }); }), 100);
+                        
+        }
     }
 }
        
-LingDocListCtrl.$inject = ['dialogs','$modal','$scope','$routeParams', 'lingDataSvc','$translate'];
-app.controller('lingDocListCtrl', ['dialogs', "$modal", "$scope", "$routeParams", "lingDataSvc",  '$translate', LingDocListCtrl]);
+LingDocListCtrl.$inject = ['$timeout','dialogs','$modal','$scope','$routeParams', 'lingDataSvc','$translate'];
+app.controller('lingDocListCtrl', ['$timeout','dialogs', "$modal", "$scope", "$routeParams", "lingDataSvc",  '$translate', LingDocListCtrl]);

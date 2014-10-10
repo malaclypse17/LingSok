@@ -45,11 +45,30 @@ box-shadow: -5px 3px 10px 1px rgba(0,0,0,0.91);
 li.lingDoc img.manualIcon {
     margin-left:5px;
 }
+
+li.lingDoc img.titlePage {
+    margin-left:10px;
+    max-height:500px;
+}
+
 li.lingDoc .panel-heading {
     padding: 1px 15px;
 }
 li.lingDoc .panel-footer {
     padding: 6px 15px;
+}
+
+li.lingDoc.selectedDoc{
+    width:75%;
+    z-index:1000;
+}
+
+li.selectedDoc .panel-body {
+    height:600px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 li.lingDoc btn-xs, li.lingDoc .btn-group-xs > .btn {
@@ -64,10 +83,18 @@ li.lingDoc .panel-footer .btn {
     li.lingDoc {
         width: 100%;
     }
+
+    li.lingDoc.selectedDoc{
+        width:100%;
+    }
     
     li.lingDoc .panel-heading h4 {
         font-size: 14px;
         font-weight:bold;
+    }
+
+    li.lingDoc img.titlePage {
+        max-height:300px;
     }
 
     li.lingDoc img.manualIcon {
@@ -82,20 +109,35 @@ li.lingDoc .panel-footer .btn {
     li.lingDoc {
         width: 20%;
     }
+    li.lingDoc.selectedDoc{
+        width:60%;
+    }
 }
 @media all and (min-width: 1300px) and (max-width:1600px) {
     li.lingDoc {
         width: 25%;
+    }
+    li.lingDoc.selectedDoc{
+        width:50%;
     }
 }
 @media all and (min-width: 1000px) and (max-width:1299px) {
     li.lingDoc {
         width: 33%;
     }
+    li.lingDoc.selectedDoc{
+        width:66%;
+    }
 }
 @media all and (min-width: 751px) and (max-width:999px) {
     li.lingDoc {
         width: 50%;
+    }
+    li.lingDoc.selectedDoc{
+        width:100%;
+    }
+    li.lingDoc img.titlePage {
+        max-height:400px;
     }
     li.lingDoc img.manualIcon {
         height:160px;

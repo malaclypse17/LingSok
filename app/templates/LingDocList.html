@@ -39,13 +39,18 @@
     </div>
 </div>
 <ul id="isotopeContainer" isotope-container="" ng-cloak="" ng-show="documentsLoaded" class="">
-    <li ng-repeat="document in documents track by document.$id" isotope-item="" class="lingDoc" ng-class="getFilterClasses(document)">
-        <div class="panel panel-default">
+    <li ng-repeat="document in documents track by document.$id" id="doc{{document.$id}}" isotope-item="" class="lingDoc" ng-click="setSelected(document);" ng-class="getFilterClasses(document)">
+        <div class="panel dropshadow panel-default">
             <div class="panel-heading">
-                <h4><a class="lingDocTitle" href="#">{{document.title|characters:85}}<span ng-show="document.year"> ({{document.year}})</span></a></h4>
+                <h4>
+                    <span ng-show="document.$id==currentSelected.$id" class="lingDocTitle" href="#">{{document.title}}</span>
+                    <span ng-show="document.$id!=currentSelected.$id" class="lingDocTitle" href="#">{{document.title|characters:85}}</span>
+                    <span ng-show="document.year"> ({{document.year}})</span>
+                </h4>
             </div>
             <div class="panel-body">
-                <img ng-show="document.titleThumbnail" class="pull-right manualIcon dropshadow" ng-src="/files/titlepages/thumbs/{{document.titleThumbnail}}">
+                <img ng-show="document.$id==currentSelected.$id&&document.titlePage!=null" class="pull-right dropshadow titlePage" ng-src="{{document.$id==currentSelected.$id?'/files/titlepages/'+document.titlePage:''}}">
+                <img ng-show="document.$id!=currentSelected.$id&&document.titleThumbnail!=null" class="pull-right manualIcon dropshadow" ng-src="/files/titlepages/thumbs/{{document.titleThumbnail}}">
                 <p ng-show="document.author">{{document.author}}</p>
                 {{document.language}}<span ng-show="document.city">, {{document.city}}</span><span ng-show="document.year"> ({{document.year}})</span>
                 <p><span ng-show="document.pages">{{document.pages}} sidor, </span>{{document.illustrations}}</p>
@@ -55,7 +60,7 @@
                 </div>
             </div>
             <div ng-show="authData.uid=='simplelogin:1'" class="panel-footer">
-                <button class="btn btn-default" ng-click=" openUpdate(document);">Ändra</button>
+                <button class="btn btn-default" ng-click="openUpdate(document);">Ändra</button>
                 <button class="btn btn-danger" ng-click="delete(document);">Radera</button>
             </div>
         </div>

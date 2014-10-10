@@ -1,5 +1,6 @@
 ﻿module Model {
     export class LingDoc {
+        $id: string;
         id: number;
         title: string;
         donor: string;

@@ -33,8 +33,10 @@ module Interfaces {
         documentsLoaded: boolean;
         filterTag: string;
         filterLanguage: string;
+        currentSelected: Model.LingDoc;
         reFilter();  
         openCreate();
+        setSelected(doc: Model.LingDoc);
         getFilterClasses(doc: Model.LingDoc);
         openUpdate(doc: Model.LingDoc);
         delete(doc: Model.LingDoc); 
