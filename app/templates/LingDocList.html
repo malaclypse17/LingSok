@@ -23,10 +23,9 @@
                 <option value=".Tyska">Tyska</option>
                 <option value=".Danska">Danska</option>
             </select>
-
-        </div>
-        <form id="auth" class="navbar-collapse navbar-form navbar-right form-group-sm" ng-class="{collapse: isCollapsed}" ng-controller="LingSearchAuthCtrl">
             <button class="btn btn-info navbar-btn" ng-show="authData.uid=='simplelogin:1'" ng-click="openCreate();">Skapa ny</button>
+        </div>
+        <form id="auth" class="navbar-collapse navbar-form navbar-right form-group-sm" ng-class="{collapse: isCollapsed}" ng-controller="LingSearchAuthCtrl">         
             <fieldset ng-hide="authData">
                 <input type="email" class="form-control input-small mail" placeholder="email" ng-model="email" />
                 <input type="password" class="form-control input-small pass" placeholder="lösen" ng-model="password" />
@@ -55,9 +54,10 @@
                 {{document.language}}<span ng-show="document.city">, {{document.city}}</span><span ng-show="document.year"> ({{document.year}})</span>
                 <p><span ng-show="document.pages">{{document.pages}} sidor, </span>{{document.illustrations}}</p>
                 <p class="lingDocDescription" ng-show="document.$id==currentSelected.$id&&document.description!=null">{{document.description}}</p>
+                <p class="donor{{document.$id==currentSelected.$id?'Big':''}}" ng-show="document.donor">Digitalisering bekostad av {{document.donor}}</p>
                 <p ng-show="authData!=null&&document.url"><a target="_blank" href="{{document.url}}"><span ng-show="document.urlSource"><img class="editlibraryIcon" src="/images/libraryicons/{{document.urlSource}}.png"><span><span style="white-space:nowrap">&nbsp;Ladda ner&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></span></a></p>
                 <p ng-show="authData!=null&&document.$id==currentSelected.$id&&document.transcription"><a target="_blank" href="/files/transcripts/{{document.transcription}}"><span style="white-space:nowrap">&nbsp;Ladda ner transkription&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></a></p>
-                <p ng-show="authData!=null&&document.$id==currentSelected.$id&&document.fullFile"><a target="_blank" href="/files/fulldocuments/{{document.fullFile}}"><span style="white-space:nowrap">&nbsp;Ladda ner fullversion&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></a></p>
+                <p ng-show="authData!=null&&document.$id==currentSelected.$id&&document.fullFile"><a target="_blank" href="/files/fulldocuments/{{document.fullFile}}"><span style="white-space:nowrap">&nbsp;Ladda ner lokal version&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></a></p>
                 <p ng-show="authData!=null&&document.$id==currentSelected.$id&&document.croppedFile"><a target="_blank" href="/files/croppeddocuments/{{document.croppedFile}}"><span style="white-space:nowrap">&nbsp;Ladda ner beskuren version lämplig för utskrift&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></a></p>
                 <div ng-repeat="tag in tags" class=" clearfix btn-group btn-group-xs">
                     <label type="button" class="btn btn-info" ng-show="document.tags[tag.tagId]">{{tag.name}}</label>

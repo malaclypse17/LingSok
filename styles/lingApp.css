@@ -11,6 +11,16 @@
     width:200px;
 }
 
+.author{
+    font-style: italic;
+}
+
+.donorBig {
+}
+
+.donor{
+    font-size: 10px;
+}
 
 #auth input.pass{  
     font-size: 10px;
