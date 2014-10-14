@@ -14,11 +14,16 @@ var LingDataSvc = (function () {
         return new LingDataSvc($firebase, $rootScope);
     };
 
+    /*initTags() {
+    this.tagList.$add(new Model.Tag("gymnastik", 9));
+    this.tagList.$add(new Model.Tag("handskrift", 10));
+    }*/
     LingDataSvc.prototype.all = function () {
         return this.docList;
     };
 
     LingDataSvc.prototype.allTags = function () {
+        //this.initTags();
         return this.tagList;
     };
     LingDataSvc.prototype.createTag = function (newTag) {

@@ -48,17 +48,17 @@
                 </h4>
             </div>
             <div class="panel-body">
-                <img ng-show="document.$id==currentSelected.$id&&document.titlePage!=null" class="pull-right dropshadow titlePage" ng-src="{{document.$id==currentSelected.$id?'/files/titlepages/'+document.titlePage:''}}">
-                <img ng-show="document.$id!=currentSelected.$id&&document.titleThumbnail!=null" class="pull-right manualIcon dropshadow" ng-src="/files/titlepages/thumbs/{{document.titleThumbnail}}">
+                <img ng-show="document.$id==currentSelected.$id&&document.titlePage!=null" class="pull-right dropshadow titlePage" ng-src="{{document.$id==currentSelected.$id?'/images/titlepages/'+document.titlePage:''}}">
+                <img ng-show="document.$id!=currentSelected.$id&&document.titleThumbnail!=null" class="pull-right manualIcon dropshadow" ng-src="/images/titlepages/thumbs/{{document.titleThumbnail}}">
                 <p class="author" ng-show="document.author">{{document.author}}</p>
                 {{document.language}}<span ng-show="document.city">, {{document.city}}</span><span ng-show="document.year"> ({{document.year}})</span>
                 <p><span ng-show="document.pages">{{document.pages}} sidor, </span>{{document.illustrations}}</p>
                 <p class="lingDocDescription" ng-show="document.$id==currentSelected.$id&&document.description!=null">{{document.description}}</p>
                 <p class="donor{{document.$id==currentSelected.$id?'Big':''}}" ng-show="document.donor">Digitalisering bekostad av {{document.donor}}</p>
                 <p ng-show="authData!=null&&document.url"><a target="_blank" href="{{document.url}}"><span ng-show="document.urlSource"><img class="editlibraryIcon" src="/images/libraryicons/{{document.urlSource}}.png"><span><span style="white-space:nowrap">&nbsp;Ladda ner&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></span></a></p>
-                <p ng-show="authData!=null&&document.$id==currentSelected.$id&&document.transcription"><a target="_blank" href="/files/transcripts/{{document.transcription}}"><span style="white-space:nowrap">&nbsp;Ladda ner transkription&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></a></p>
-                <p ng-show="authData!=null&&document.$id==currentSelected.$id&&document.fullFile"><a target="_blank" href="/files/fulldocuments/{{document.fullFile}}"><span style="white-space:nowrap">&nbsp;Ladda ner lokal version&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></a></p>
-                <p ng-show="authData!=null&&document.$id==currentSelected.$id&&document.croppedFile"><a target="_blank" href="/files/croppeddocuments/{{document.croppedFile}}"><span style="white-space:nowrap">&nbsp;Ladda ner beskuren version lämplig för utskrift&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></a></p>
+                <p ng-show="authData!=null&&document.$id==currentSelected.$id&&document.transcription"><a target="_blank" href="/files/transcriptions/{{document.transcription}}"><span style="white-space:nowrap">&nbsp;Ladda ner transkription&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></a></p>
+                <p ng-show="authData!=null&&document.$id==currentSelected.$id&&document.fullFile"><a target="_blank" href="/files/fullversions/{{document.fullFile}}"><span style="white-space:nowrap">&nbsp;Ladda ner lokal version&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></a></p>
+                <p ng-show="authData!=null&&document.$id==currentSelected.$id&&document.croppedFile"><a target="_blank" href="/files/croppedversions/{{document.croppedFile}}"><span style="white-space:nowrap">&nbsp;Ladda ner beskuren version lämplig för utskrift&nbsp;&nbsp;<span class="glyphicon glyphicon-download"></span></a></p>
                 <div ng-repeat="tag in tags" class=" clearfix btn-group btn-group-xs">
                     <label type="button" class="btn btn-info" ng-show="document.tags[tag.tagId]">{{tag.name}}</label>
                 </div>

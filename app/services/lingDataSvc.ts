@@ -13,18 +13,24 @@ class LingDataSvc implements Interfaces.ILingDataSvc {
         var fireBaseLingTagsRef = new Firebase(this.fireBaseUrl + 'tags');
         this.tagList = $firebase(fireBaseLingTagsRef).$asArray();
         var ref = new Firebase(this.fireBaseUrl);
-        this.auth = ref;    
+        this.auth = ref;   
+         
     }
 
     public static LingDataSvc($firebase, $rootScope): LingDataSvc {
         return new LingDataSvc($firebase, $rootScope);
     }
+    /*initTags() {       
+        this.tagList.$add(new Model.Tag("gymnastik", 9));
+        this.tagList.$add(new Model.Tag("handskrift", 10));
+    }*/
 
-    all() {
+    all() {       
         return this.docList;
     }
 
     allTags() {
+        //this.initTags();
         return this.tagList;
     }
     createTag(newTag: Model.Tag) { return this.tagList.$add(newTag);  }
