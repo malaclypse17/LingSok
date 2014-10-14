@@ -1,0 +1,31 @@
+﻿
+<div class="modal-header">
+    <h2>Uppdatera användaruppgifter</h2>
+</div>
+<div class="modal-body">
+    <p>Du har loggat in med ett engångslösenord och därmed verifierat din emailaddress. Välj nu det lösenord du önskar använda i fortsättningen.</p>
+    <form novalidate name="userForm" role="form">
+        <div class="row-fluid">
+            <div class="form-group" ng-class="{'has-error': userForm.password.$invalid}">
+                <label for="password">
+                    Välj nytt lösenord
+                </label>
+                <input name="password" type="password" class="form-control" required ng-model="password" />
+                <span class="help-block" ng-show="userForm.password.$error.required&&userForm.password.$dirty">Du måste skriva in ett lösenord</span>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error': userForm.confirm_password.$invalid}">
+                <label for="confirm_password">
+                    Bekräfta lösenord
+                </label>
+                <input name="confirm_password" type="password" ng-model="confirmPassword" class="form-control" required ui-validate="'$value==password'" ui-validate-watch="'password'" />
+                <span class="help-block" ng-show="userForm.confirm_password.$error.required&&userForm.confirm_password.$dirty">Du måste bekräfta lösenordet</span>
+                <span class="help-block" ng-show="userForm.confirm_password.$error.validator&&userForm.confirm_password.$dirty">Lösenorden matchar inte</span>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="submitForm()" ng-disabled="documentForm.$invalid">Uppdatera användare</button>
+</div>
+
