@@ -61,7 +61,6 @@
     <Content Include="images\titlepages\1857-G.png" />
     <Content Include="images\titlepages\1859-V.png" />
     <Content Include="images\titlepages\1860-S.png" />
-    <Content Include="images\titlepages\1861-B.png" />
     <Content Include="images\titlepages\1861-O.png" />
     <Content Include="images\titlepages\1863-D.png" />
     <Content Include="images\titlepages\1867-K.png" />
@@ -127,7 +126,6 @@
     <Content Include="images\titlepages\thumbs\tn1857-G.png" />
     <Content Include="images\titlepages\thumbs\tn1859-V.png" />
     <Content Include="images\titlepages\thumbs\tn1860-S.png" />
-    <Content Include="images\titlepages\thumbs\tn1861-B.png" />
     <Content Include="images\titlepages\thumbs\tn1861-O.png" />
     <Content Include="images\titlepages\thumbs\tn1863-D.png" />
     <Content Include="images\titlepages\thumbs\tn1867-K.png" />

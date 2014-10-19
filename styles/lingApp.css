@@ -42,15 +42,19 @@ li.lingDoc .panel{
     cursor:pointer;
 }
 
+li.lingDoc .panel .panel-body{
+     
+}
+
 li.lingDoc:hover {
     margin-top:-5px;
     margin-left:-5px;
 }
 
-
 li.lingDoc {
+    display:block;
   position: relative;
-  min-height: 1px;
+  min-height: 400px;
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -88,7 +92,7 @@ li.lingDoc.selectedDoc{
 }
 
 li.selectedDoc .panel-body {
-    height:600px;
+    
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -106,6 +110,7 @@ li.lingDoc .panel-footer .btn {
 @media all and (max-width: 750px) {
     li.lingDoc {
         width: 100%;
+        min-height:200px;
     }
 
     li.lingDoc.selectedDoc{
