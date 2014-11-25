@@ -26,6 +26,7 @@
     <Content Include="app\templates\LingDocList.html" />
     <Content Include="images\titlepages\1645.png" />
     <Content Include="images\titlepages\1693-P.png" />
+    <Content Include="images\titlepages\1733.PNG" />
     <Content Include="images\titlepages\1756.png" />
     <Content Include="images\titlepages\1765.png" />
     <Content Include="images\titlepages\1799.png" />
@@ -91,6 +92,7 @@
     <Content Include="images\titlepages\Tal.png" />
     <Content Include="images\titlepages\thumbs\tn1645.png" />
     <Content Include="images\titlepages\thumbs\tn1693-P.png" />
+    <Content Include="images\titlepages\thumbs\tn1733.png" />
     <Content Include="images\titlepages\thumbs\tn1756.png" />
     <Content Include="images\titlepages\thumbs\tn1765.png" />
     <Content Include="images\titlepages\thumbs\tn1799.png" />
